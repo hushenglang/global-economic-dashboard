@@ -1,7 +1,7 @@
-
 import requests
 
-class FredCPIService:
+
+class FredService:
     def __init__(self, api_key):
         self.api_key = api_key
         self.base_url = "https://api.stlouisfed.org/fred/series/observations"
@@ -30,8 +30,9 @@ class FredCPIService:
         else:
             response.raise_for_status()
 
+
 # Example usage:
 # Replace 'your_api_key_here' with your actual FRED API key
-fred_service = FredCPIService(api_key='your_api_key_here')
+fred_service = FredService(api_key='your_api_key_here')
 cpi_data = fred_service.get_cpi_data(start_date='2020-01-01', end_date='2023-01-01')
 print(cpi_data)

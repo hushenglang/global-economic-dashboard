@@ -21,5 +21,5 @@ def get_cpi_data(start_date=None, end_date=None, series_id="CPIAUCSL"):
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    cpiDate = get_cpi_data("2020-01-01", "2024-11-15")
+    cpiDate = get_cpi_data("2020-01-02", "2023-11-15")
     print(cpiDate)
